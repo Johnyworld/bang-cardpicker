@@ -1,0 +1,124 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:300,400');
+@import url('https://fonts.googleapis.com/css?family=Germania+One');
+
+/* RESET */
+body, div, ul, p {
+    padding: 0;
+    margin: 0;
+}
+
+.bang-wrap { 
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background-color: #333; 
+    text-align: center;
+    font-family: 'Open Sans', sans-serif;
+    color: white;
+}
+
+.bang-wrap .card-wrap {
+    position: absolute;
+    top: 20px; left: 20px; right: 20px; bottom: 20px;
+    margin: auto;
+    padding: 30px;
+    max-width: 380px; max-height: 600px;
+    background-color: white;
+    background-image: url(images/bg.jpg);
+    border-radius: 30px;
+    overflow: hidden;
+}
+
+.main { 
+    position: absolute;
+    top: 45%; left: 0; right: 0;
+    transform: translateY(-50%);
+    height: 300px;
+    width: 150px;
+    margin: auto;
+    
+}
+.main #shape {
+    width: 150px; height: 150px;
+    background-image: url(images/pickcard-sprite.png);
+    background-repeat: no-repeat;
+    background-position: 0 0;
+    opacity: 0;
+}
+.main #shape.heart { background-position: 0 0; }
+.main #shape.club { background-position: -150px 0; }
+.main #shape.spade { background-position: 0 -150px; }
+.main #shape.diamond { background-position: -150px -150px; }
+
+.main #number {
+    font-size: 145px;
+    font-weight: 100;
+    line-height: 1;
+    color: #ffdfcc;
+    opacity: 0;
+}
+
+#loading {
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+    height: 20px;
+    margin: auto;
+}
+
+#loading li {
+    display: inline-block;
+    margin-right: 20px;
+    width: 20px; height: 20px;
+    background-color: #ffdfcc;
+    border-radius: 20px;
+    opacity: 0;
+}
+
+#loading li:last-child {
+    margin-right: 0;
+}
+
+.bang-btn {
+    display: block;
+    position: absolute;
+    left: 30px; right: 30px; bottom: 30px;
+    background-color: #db4242;
+    padding: 12px 0;
+    font-size: 18px;
+    font-weight: 600;
+    border-radius: 20px;
+    cursor: pointer;
+}
+
+#cover {
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background-color: black;
+}
+
+#cover .text-wrap {
+    position: absolute;
+    left: 50%;
+    bottom: 46%;
+    transform: translateX(-50%);
+}
+
+#cover .text-wrap .cover-bang {
+    opacity: .5;
+}
+
+#cover .text-wrap .cover-draw-eng {
+    font-size: 60px;
+    line-height: 1;
+    margin-bottom: 10px;
+    font-family: 'Germania One', cursive;
+}
+
+#cover .text-wrap .cover-draw {
+    color: #db4242;
+}
+
+@media screen and (max-device-width: 1260px) {
+    .bang-wrap .card-wrap {
+        max-width: 100%; max-height: 100%;
+    }
+}
